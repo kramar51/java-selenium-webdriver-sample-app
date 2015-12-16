@@ -1,7 +1,4 @@
-import org.junit.AfterClass;
-import org.junit.Assert;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -25,7 +22,7 @@ public class TestLogin {
         webDriver = new FirefoxDriver();
         webDriver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
     }
-
+    @Ignore
     @Test
     public void testLoginPage(){
         webDriver.navigate().to("https://owa.pgs-soft.com");
@@ -54,7 +51,7 @@ public class TestLogin {
             return false;
         }
     }
-
+    @Ignore
     @Test
     public void testRadioButton(){
         webDriver.navigate().to("http://codeseven.github.io/toastr/demo.html");
